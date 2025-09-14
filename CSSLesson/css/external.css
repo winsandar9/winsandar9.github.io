@@ -1,0 +1,33 @@
+h1{
+    color: red;
+    text-align: center;
+}
+
+/* id selector */
+#idselector{
+    color: green;
+    line-height: 25px;
+    word-spacing: 25px;
+    text-transform: capitalize;
+}
+
+/* class selector */
+.classselector{
+    color: brown;
+    line-height: 20px;
+    text-indent: 50px;
+    text-transform: uppercase;
+}
+
+/* child */
+#child > a{
+    color:red;
+}
+
+/* decendent */
+#desc a{
+    color:green;
+}
+
+
+
