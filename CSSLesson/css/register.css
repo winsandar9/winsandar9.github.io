@@ -1,0 +1,76 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+    color: #FF00BB;
+}
+
+#form{
+    width:50%;
+    margin: auto;
+}
+
+input[type="text"],input[type="email"],input[type="number"],input[type="date"]{
+height: 40px;
+width: 100%;
+margin-bottom: 30px;
+margin-top: 10px;
+outline: none;
+border-radius: 5px;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="date"]{
+    border: 4px solid grey;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.label-title{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+input[type="radio"]:checked + label{
+    color: #FF0000;
+    font-style: italic;
+}
+
+.label-title-hobbies{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+input[type="checkbox"]:enabled + label{
+    color: green;
+    font-style: italic;
+}
+
+input[type="checkbox"]:checked + label{
+    color: red;
+    font-style: normal;
+}
+
+input[type="checkbox"]:disabled + label{
+    color: grey;
+    letter-spacing: 20px;
+}
+
+p:empty{
+    height:20px;
+    background-color: #FF0000;
+}
+
+ul li:first-child{
+    background-color: yellow;
+}
+
+ul li:last-child{
+    background-color: red;
+}
+
+ul li:nth-child(5){
+    background-color: green;
+}
