@@ -31,7 +31,7 @@ h1{
 
 /* pseudo selector*/
 
-a:link{
+/* a:link{
     text-decoration: none;
     letter-spacing: 10px;
 }
@@ -47,7 +47,7 @@ a:active{
 
 a:visited{
     color: brown;
-}
+} */
 
 /* target */
 
@@ -61,4 +61,71 @@ div:target{
     color: green;
     text-transform: uppercase;
     line-height: 20px;
+}
+
+/* border */
+.borderone{
+    border: 10px solid red;
+}
+
+.bordertwo{
+    border-top: 10px dotted navy;
+    border-left: 10px dotted navy;
+    border-right: 10px dotted navy;
+}
+
+.borderthree{
+   /* border-style: dotted; */
+   /* all */
+   /* border-style: dotted solid; */
+   /* T&B / L&R */
+   /* border-style:solid dashed double dotted; */
+   /* T / R /B / L */
+   border-style: solid dotted double;
+   /* T / L&R / B */
+}
+
+.borderfour{
+    border-style: solid;
+    border-color: red yellow green navy;
+    border-width: 30px 20px 25px 20px;
+}
+
+/* margin */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.marginone{
+    margin: 50px 100px;
+    border: 1px solid black;
+}
+
+.margintwo{
+    margin-top: -200px;
+    border: 1px solid black;
+}
+
+.paddingone{
+    /* padding: 10px 200px; */
+    border: 1px solid black;
+    padding-top: 300px;
+}
+
+/* layout */
+.inline{
+    border: 2px solid red;
+    width: 400px;
+    display: inline-block;
+}
+
+.border{
+    border: 2px solid green;
+}
+
+.block{
+    border: 2px solid green;
+    width: 400px;
+    display: inline-block;
 }
