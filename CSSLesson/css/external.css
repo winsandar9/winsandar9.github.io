@@ -129,3 +129,57 @@ div:target{
     width: 400px;
     display: inline-block;
 }
+/* float */
+
+.float_left img{
+    width:30%;
+    border:2px solid black;
+    float:left;
+}
+
+.clear{ 
+    clear: left;
+}
+
+.float_right img{
+    width: 30%;
+    float: right;
+    border: 2px solid blue;
+}
+
+/* grid */
+.gridone div,.gridtwo div,.gridthree div,.gridfour div,.gridfive div,.gridsix div{
+    padding:30px;
+    color: white;
+    text-align: center;
+}
+
+.gridone,.gridtwo,.gridthree,.gridfour,.gridfive,.gridsix{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridtwo{
+    grid-column-gap: 40px;
+}
+
+.gridthree{
+    grid-row-gap: 50px;
+}
+
+.gridfour{
+    grid-gap: 40px;
+    /* grid-column-gap: 40px; */
+    /* grid-row-gap: 60px; */
+}
+
+.columnadd{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rowadd{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+}
