@@ -183,3 +183,90 @@ div:target{
     grid-row-end: 3;
     grid-column-start: 2;
 }
+
+/* position */
+.position_relative_parent{
+    border: 2px solid black;
+    width: 1000px;
+    height: 500px;
+}
+
+.position_relative{
+    border: 2px solid red;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    top: 50px;
+    right: 100px; 
+}
+
+.position_absolute_parent{
+    border: 2px solid brown;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.position_absolute{
+    width: 600px;
+    height: 300px;
+    border: 2px solid green;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    left: 50px; 
+}
+
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+/* online font */
+
+.online_font {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* offline font */
+@font-face {
+    src: url(../font/static/YanoneKaffeesatz-Bold.ttf);
+    font-family: "Bold";
+}
+
+.offline_font{
+    font-family: "Bold";
+}
+
+/* media css  */
+/* phone size */
+@media (max-width: 600px){
+    body{
+        background-color: blue;
+    } 
+}
+
+/* tablet size */
+@media (min-width: 601px) and (max-width: 900px){
+    body{
+        background-color: red;
+    }
+}
+
+/* laptop size */
+@media (min-width: 901px) and (max-width: 1201px){
+    body{
+        background-color: yellow;
+    }
+}
+
+/* extra laptop size */
+@media (min-width: 1201px){
+    body{
+        background-color: green;
+    }
+}
+
