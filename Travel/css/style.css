@@ -213,26 +213,27 @@
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 7px;
+    grid-gap: 15px;
 }
-
 .text{
-    text-align: justfy;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 10px;
     
-
 }
 
-.reviewer img{
+
+
+
+.text img{
     margin-top: 7px;
     width: 30%;
     float: left;
-    border-radius: 50%; 
+    border-radius: 50%;
+    
 }
 
-.reviewer{
-    display: flex;
-    align-items: center;
-    grid-gap: 15px;   
-}
+
 
 
 /* end client review */
