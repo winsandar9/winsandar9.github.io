@@ -40,7 +40,7 @@
 
 .get_started{
     background-color: hsl(189, 89%, 40%);
-    color: white !important;
+    color: #b8606e !important;
     display: inline_block;
     padding: 10px;
     border-radius: 7px;
@@ -67,7 +67,7 @@
     position: absolute;
     top: 30%;
     left: 25%;
-    color: white;
+    color: #e94e82;
     text-align: center;
 }
 
@@ -105,7 +105,6 @@
 
 .popular_card img{
     width: 100%;
-
 }
 
 .popular_item{
@@ -215,28 +214,101 @@
     margin-bottom: 7px;
     grid-gap: 15px;
 }
+
 .text{
     border: 1px solid grey;
-    border-radius: 8px;
+    border-radius: 5px 55px;
     padding: 10px;
-    
+    background-color:hsl(189, 89%, 40%);
+    color: #e94e82;
 }
 
+.client_review img{
+    margin-right: 20px;
+}
 
-
+.star_rating{
+    color: yellow;
+}
 
 .text img{
     margin-top: 7px;
     width: 30%;
     float: left;
-    border-radius: 50%;
-    
+    border-radius:50%;   
+}
+/* end client review */
+/* start service */
+.service{
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
 }
 
+.service_text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* border: 1px solid grey; */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: hsl(0, 28%, 85%);
+  color:hsl(189, 89%, 40%)
+}
+/* end service */
 
+/* start footer */
+#footer{
+    background-color: hsl(189, 89%, 40%);
+    color: #e94e82;
+    margin-top: 40px;
+}
 
+.footer_img img{
+    width: 50%;
+}
 
-/* end client review */
+.footer{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 40px;
+}
+
+.footer div{
+    flex: 1;            
+    min-width: 200px;
+}
+
+.col p a{
+   color: #e94e82;
+    text-decoration: none;
+}
+
+.footer_nav{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer_icons{
+    margin-top: 10px;
+} 
+
+.line{
+    border: none;               
+    border-top: 2px solid #e94e82; 
+    margin: 20px 0;  
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 15px;
+}
+/* end footer */
 
 
 
