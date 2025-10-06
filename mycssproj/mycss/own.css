@@ -1,0 +1,551 @@
+@font-face {
+    src: url(../myfont/static/Jost-MediumItalic.ttf);
+    font-family: "jost"; 
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "jost";
+}
+/* start nav */
+#jewel{
+    background-color: hsl(305, 100%, 88%);
+}
+#jewel h1{
+    text-align: center;
+    padding-top: 25px;
+    color: lab(56.88% 51.53 54.4);
+}
+.nav_logo{
+    width: 90px; 
+    height: 100px;
+    border-radius: 30%;
+    margin-left: 10%;
+}
+.nav_buttons{
+    float: right;
+    padding-top: 30px;
+    font-size: 20px;
+    word-spacing: 20px;
+}
+.nav_buttons a{
+    text-decoration: none;
+    color: lab(56.88% 51.53 54.4);
+}
+.nav_buttons a:hover{
+    color:lch(78.49% 76.81 86.61 / 0.925);
+    text-decoration: underline;
+}
+/* end nav */
+/* start bunner */
+.gold_jewel{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 25px; 
+    margin-left: 10%;   
+}
+.jl img{
+    width: 500px;
+    height: 500px;
+    border-radius: 20%;
+    column-gap: 0px;
+}
+.gold_jewel img:hover{
+    transform: scale(0.5);
+    transition-duration: 0.4s;
+}
+.gold_jewel h3{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+}
+/* end bunner */
+/* start items */
+.items_title{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: lab(56.88% 51.53 54.4);
+}
+.items{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px; 
+    margin-top:25px;
+}
+.items div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 30% 5px; 
+}
+.items div img{
+    width: 35%;
+    height:250px;
+    border-radius: 20%;
+    margin-left: 30%;
+    padding-top: 10px;  
+}
+.items div h3{
+    color: lab(56.88% 51.53 54.4);
+    padding-left: 7%; 
+}
+.items div h4{
+    color: lab(56.88% 51.53 54.4);
+    padding-left: 7%;
+}
+.items div a button{
+    background-color: lab(56.88% 51.53 54.4);
+    border-radius: 10px;
+    text-align: center;
+    color:hsl(305, 68%, 27%);
+    padding: 5px 10px;
+}
+.items div a{
+    text-decoration: none;
+}
+.items div a button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+div img:hover{
+    transform: scale(1.5);
+    transition-duration: 0.4s;
+}
+.imgho{
+    overflow: hidden;
+}
+
+/* end items */
+/* start products */
+.products{
+    text-indent: 35px;
+    text-align: justify;
+    font-size: medium;
+    color: lab(56.88% 51.53 54.4);
+    line-height: 35px;
+}
+.producttypes{
+    display: flex;
+    gap: 50px;
+    justify-content: center; 
+    color: lab(56.88% 51.53 54.4);
+    font-size: larger;
+    padding-top: 30px;
+}
+.products h2{
+    text-align: center
+}
+.producttypes a{
+    text-decoration: none;
+    color: lab(56.88% 51.53 54.4);
+}
+.producttypes button:hover{
+    color:lch(78.49% 76.81 86.61 / 0.925);
+    text-decoration: underline;
+}
+/* end products */
+/* start footer */
+.footer{
+    display: flex;
+}
+.footer div{
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    margin-top: 30px;
+    color: lab(56.88% 51.53 54.4);
+}
+.lgt{
+    line-height: 35px;
+}
+.lgt h2,.lgt p{
+    text-align: center;
+} 
+.lgt img{
+    margin-left: 40%;
+    border-radius: 30%;
+    width: 15%;
+    height: 20%;
+}
+.opt{
+    text-align: center;  
+}
+.contactinfos p{
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px; 
+}
+.contactinfos h3{
+    text-align: center;
+}
+.copyright h3{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+.copyright h4{
+    margin-bottom: 20px; 
+}
+.copyright{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+    margin-bottom: 20px;
+}
+/* end footer */
+/* start invoice */
+.voucher{
+    display: block;
+}
+.voucher div label{
+    width: 100%;       
+    max-width: 500px;  
+    padding: 8px;      
+    margin-bottom: 15px;
+    margin-left: 20%;
+    color: lab(56.88% 51.53 54.4); 
+}
+.voucher div input{
+    width: 100%;       
+    max-width: 500px;  
+    padding: 8px;      
+    margin-bottom: 15px;
+    margin-left: 20%; 
+    border: 1px solid hsl(305, 68%, 27%);
+    border-radius: 15px;
+}
+.voucher div textarea{
+    width: 100%;       
+    max-width: 500px;  
+    padding: 8px;      
+    margin-bottom: 15px;
+    margin-left: 20%; 
+    border: 1px solid hsl(305, 68%, 27%);
+    border-radius: 15px; 
+}
+.voucher button{
+    margin-left: 55%;
+    padding: 15px 10px;
+    border: 1px solid hsl(305, 68%, 27%);
+    border-radius: 15px;
+    color: lab(56.88% 51.53 54.4);
+}
+/* end invoice */
+/* start about */
+.about{
+    text-indent: 35px;
+    text-align: justify;
+    font-size: medium;
+    color: lab(56.88% 51.53 54.4);
+    line-height: 35px;
+}
+.about h2{
+    text-align: center;
+}
+/* end about */
+/* start products */
+.products{
+    text-indent: 35px;
+    text-align: justify;
+    font-size: medium;
+    color: lab(56.88% 51.53 54.4);
+    line-height: 35px;
+}
+.products h2{
+    text-align: center;
+}
+.producttypes{
+    display: flex;
+    gap: 50px;
+    justify-content: center; 
+    color: lab(56.88% 51.53 54.4);
+    font-size: larger;
+    padding-top: 20px;
+}
+.producttypes a{
+    text-decoration: none;
+    color: lab(56.88% 51.53 54.4);
+}
+.producttypes button:hover{
+    color:lch(78.49% 76.81 86.61 / 0.925);
+    text-decoration: underline;
+}
+/* end products */
+/* start contact */
+#contact h2{
+    text-align: center;      
+    width: 100%;            
+    margin: 20px;
+    color:lab(56.88% 51.53 54.4); 
+}
+#contact h3{
+    color:lab(56.88% 51.53 54.4);
+    padding-bottom: 20px;
+}
+#contact p{
+    color: lab(56.88% 51.53 54.4);
+}
+.contact{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    color:lab(56.88% 51.53 54.4);
+    padding-top: 20px;
+}
+.aboutcontact{
+    width: 50%;
+    margin-left: 25%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.aboutcontact ul li a{
+    text-decoration: none;
+    color:lab(56.88% 51.53 54.4);
+    padding-bottom: 15px;
+}
+.aboutcontact a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+.withcontact{
+    width: 50%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+    padding-top: 15px;
+} 
+.withcontact p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    line-height: 10px;
+    padding-top: 15px; 
+}
+/* end contact */
+/* start service */
+.service h2{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.service strong{
+    color:lab(56.88% 51.53 54.4);
+    margin-left: 10%;
+    padding-top: 20px;
+}
+.service p{
+    margin-left: 10%; 
+    text-align: justify;
+    color: lab(56.88% 51.53 54.4);
+    padding-bottom: 15px; 
+}
+/* end service */
+/* start customerreviews */
+#review h2{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+    padding-bottom: 25px;
+}
+.review{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding-left: 20px;
+    color: lab(56.88% 51.53 54.4);
+}    
+.review div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 15% 7px;
+    background-color: lch(63.89% 49.21 328.72);
+}
+.feedback img{
+    width: 30%;
+    border-radius: 70%;
+    float: left;
+    padding-left: 15px;
+}
+/* end customerviews */
+/* start bracelets */
+#jewelbrace h2{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+}
+.jewelbrace{
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 15px;
+    padding-top: 25px;
+}
+.jewelbrace div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 10px 20%;
+}
+.jewelbrace div img{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+.jewelbrace div img:hover{
+    transform: scale(1.5);
+    transition-duration: (0.4s);
+}
+.overflowimg{
+    overflow:hidden;    
+}
+.jewelbrace div h4{
+    margin-left: 10px;
+    padding-bottom: 7px;
+    text-align: center;
+    line-height: 1.5;
+    color: lab(56.88% 51.53 54.4);
+}
+.jewelbrace div button{
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: hsl(305, 68%, 27%);
+    background-color: lab(56.88% 51.53 54.4);
+    text-decoration: none;
+}
+.jewelbrace div a{
+    text-decoration: none;
+}
+.jewelbrace div a button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+/* end bracelets */
+/* start earrings */
+#ear h2{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+    padding-bottom: 20px;
+}
+.ear{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+.ear div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 10px 20%;
+}
+.ear div img{
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    padding: 15px;
+}
+.ear div h4{
+    margin-left: 20px;
+    color: lab(56.88% 51.53 54.4);
+}
+.ear div a button{
+    color:hsl(305, 68%, 27%);
+    background-color: lab(56.88% 51.53 54.4);
+    border-radius: 15px;
+    padding: 5px 10px; 
+}
+.ear div a{
+    text-decoration: none;
+}
+.ear div button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+.ear div img:hover{
+transform: scale(1.5);
+transition-duration: (0.4s);
+}
+.earrings:hover{
+    overflow: hidden;
+}
+/* end earrings */
+/* start ring */
+#rin h2{
+    color: lab(56.88% 51.53 54.4);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.rin{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+}
+.rin div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 10px 20%;
+}
+.rin div img{
+    width: 400px;
+    height: 250px;
+    border-radius: 35px;
+    padding: 20px;
+}
+.rin div img:hover{
+    transform: scale(1.5);
+    transition-duration: (0.4s);
+}
+.rinhover{
+    overflow: hidden;
+}
+.rin div h4{
+    color: lab(56.88% 51.53 54.4);
+    padding-left: 20px;
+}
+.rin div a button{
+    background-color: lab(56.88% 51.53 54.4);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.rin div a{
+    text-decoration: none;
+}
+.rin div a button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+/* end ring */
+/* start necklace */
+#pendants h2{
+    text-align: center;
+    color: lab(56.88% 51.53 54.4);
+    margin-bottom: 30px;
+}
+.pendants{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.pendants div{
+    border: 1px solid lab(56.88% 51.53 54.4);
+    border-radius: 10px 20%;
+}
+.pendants div img{
+    width: 370px;
+    height: 200px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+.pendants div img:hover{
+    transform: scale(1.5);
+    transition-duration: (0.4s);
+}
+.necklaces{
+    overflow: hidden;
+}
+.pendants div h4{
+    color: lab(56.88% 51.53 54.4);
+    padding-left: 20px;
+}
+.pendants div a button{
+    background-color: lab(56.88% 51.53 54.4);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.pendants div a{
+    text-decoration: none;
+}
+.pendants div a button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+/* end necklace */
+
