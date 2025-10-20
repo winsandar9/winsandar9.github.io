@@ -33,9 +33,21 @@
         let two = 3 - 1;
         console.log(two);
 
+        let number = 7;
+        number = number - 1;
+        console.log(number);
+
+        number -= 1;
+        console.log(number);
+
+        let num = 5;
+        console.log(num--);
+        console.log(num);
+        console.log(--num);
+        
         // division /
         let div1 = 24324324/5324;
-        console.log(div1.tofixed(2));
+        console.log(div1.toFixed(2));
 
         let div2 = 28;
         div2 /= 3;
@@ -50,9 +62,12 @@
         console.log(multi1);
 
         // exponentation operator **
-        
+        let expl = 12 ** 5;
+        console.log(expl);
 
-
+        // presendence
+        let total = 2 * ( 2 + 5 ) / 2 % 3 - 5;
+        console.log(total);
     </script>
 </body>
 </html>

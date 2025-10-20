@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Lessons</h1>
+    <img id="myImage" src="images/pexels-rbrigant44-2526097.jpg" alt="" srcset="" width="300" height="300" onmouseover="big()" onmouseleave="normal()">
+    <!--
+        onmouseover
+        onmouseenter
+    
+        onmouseleave
+        onmouseout
+
+        onmousedown
+        onclick
+    -->
+    <br><br>
+    <input type="text" id="myInput" onkeyup="sayHi()">
+    <p id="result"></p>
+    <!--
+        onkeyup
+        onkeydown
+        onchange
+    -->
+    <script>
+        function big() {
+            let myImage = document.getElementById('myImage');
+            myImage.style.width = "500px";
+            myImage.style.height = "500px";
+        }
+
+        function normal() {
+            let myImage = document.getElementById('myImage');
+            myImage.style.width = "300px";
+            myImage.style.height = "300px";
+        }
+
+        function sayHi() {
+        let res = document.getElementById('myInput').value; 
+        document.getElementById('result').innerText = res; 
+        }
+    </script>
+</body>
+</html>

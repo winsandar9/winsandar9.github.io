@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock-frame {
+            border: 4px solid hsl(204, 81%, 58%);
+            border-radius: 10px;
+            padding: 20px;
+            color:hsl(204, 81%, 58%);
+            text-align: center;
+            width: 40%;
+            margin-left: 30%;
+            margin-top: 30px;
+            word-spacing: 40px;
+            font-family: 'digital-7', monospace;
+            font-size: xx-large;
+        }    
+    </style>
+</head>
+<body>
+    <h1 style = "text-align: center; color: hsl(204, 81%, 58%);">Tableclock Homework</h1>
+    <div class="clock-frame">
+        <p id="clock"><strong>00:00:00<sup>AM</sup></strong></p>
+        <p id="date"><strong>WED OCT 18 2025</strong></p>
+    </div>
+</body>
+    <script>
+        function todayDate() {
+            let today = new Date();
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+            let seconds = today.getSeconds();
+            let ampm;
+            if (hours >= 12) {
+                ampm = 'PM';
+            } else {
+                ampm = 'AM';
+            }
+            if (hours > 12) {
+                hours = hours - 12;
+            } else if (hours === 0) {
+                hours = 12;
+            }
+            if (hours < 10) {
+                hours = '0' + hours;
+            }
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if (seconds < 10) {
+                seconds = '0' + seconds;
+            }
+            document.getElementById('clock').innerHTML = `<strong>${hours}: ${minutes}: ${seconds} <sup>${ampm}</sup></strong>`;
+            let days = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+            let months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+            let dayName = days[today.getDay()];
+            let monthName = months[today.getMonth()];
+            let date = today.getDate();
+            let year = today.getFullYear();
+            document.getElementById('date').innerHTML = `<strong>${dayName} ${monthName} ${date} ${year}</strong>`;
+        }
+            setInterval(todayDate, 1000);
+            todayDate();
+    </script>
+</body>
+</html>

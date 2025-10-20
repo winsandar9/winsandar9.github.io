@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let secretNo = 5;
+        let guessNo = prompt("Enter a number between 0 to 9");
+        while (secretNo != guessNo){
+            if (guessNo < secretNo){
+                alert('Your Number is Lower, Please Try again!');
+            }else{
+                alert('Your Number is Greater, Please Try again!');
+            }
+            guessNo = prompt("Enter a number between 0 to 9");
+        }
+        document.write('Correct');
+        document.write('Wow Your Correct,When this times 4');
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="idDom">DOM <en>Modal</en>Lessons</h1>
+    <p class="myClass">Class Selector</p>
+    <div>Class One Selector</div>
+    <div class="myclass">Class Two Selector</div>
+    <button onclick="show()">Click Me</button>
+
+    <script>
+        function show(){
+           // alert("ok");
+           // Id selector
+           let myId = document.getElementById("idDom");
+           console.log(myId);
+           console.log(myId.innerText);
+           console.log(myId.InnerHTML);
+
+           // class selector
+           let myClass = document.getElements.ByClassName("myClass");
+           console.log(myClass);
+           console.log(myClass[0].innerHTML);
+
+           // tag selector
+           let myTag = document.getElementsByTagName("div");
+           console.log(myTag);
+           console.log(myTag[1].innerText);
+
+           // query selector
+           let myQuery = document.querySelector("#idDom");
+           console.log(myQuery);
+           console.log(myQuery.innerText);
+           console.log(myQuery.innerHTML);
+
+           let myQueryClass = document.querySelector(".myClass");
+           console.log(myQueryClass);
+
+           // query selector all
+           let queryAll = document.querySelectorAll('myClass');
+           console.log(myQueryAll)
+           
+           
+           
+           
+           
+           
+           
+           
+
+           
+        }
+    </script>
+</body>
+</html>

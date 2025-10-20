@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin-left: 40%;
+            margin-top: 40px;
+        }
+        #foodName{
+            padding-right: 21px;
+        }
+        #price{
+            padding-right: 25px;
+        }
+        button{
+            display: inline-block;
+            margin-left: 22%;
+        }
+        table{
+            display: inline-block;
+            margin-left: 30%;
+        }
+        th{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Table of Daily Food Expenses</h1>
+    <form name="inputData">
+        <label for="foodName">Name:</label>
+        <input type="text" id="foodName" name="food"><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="foodprice"><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity"><br><br>
+
+        <button type="button" onclick="foodList()">Confirm</button><br><br><br>
+    </form>
+    <table border="1" cellpadding="30px" cellspacing="1.5px">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+            <tr id="gtRow">
+                <th colspan="4">Grand Total</th>
+                <th id="gtValue">00</th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // array
+        var foodListArray = [];
+        // function
+        function foodList(){
+            // alert('foodList');
+            // get data
+            let fname = document.inputData.food.value;
+            let fprice = parseFloat(document.inputData.foodprice.value);
+            let fquantity = parseInt(document.inputData.quantity.value);
+            let total = fprice * fquantity;                
+            // console.log(fname,fprice,fquantity);
+            // create object
+            let daily = {
+                foodN : fname,
+                foodP : fprice,
+                foodQ : fquantity, 
+                foodT: total,   
+            }
+            // console.log(daily);
+            // console.log(foodListArray);
+            // push object
+            foodListArray.push(daily);
+            // console.log(foodListArray);
+            let grandTotal = 0;
+            let tablebody = document.getElementById("dataBody");
+            let grandTotalrow = document.getElementById("gtRow");
+            tablebody.removeChild(grandTotalrow);
+            // showData
+            tablebody.innerHTML = ""
+            for (let i = 0; i < foodListArray.length; i++){
+                // console.log(foodListArray[i]);
+                let clusterObj = foodListArray[i];
+                grandTotal += clusterObj.foodT;
+                let newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                            <td>${i + 1}</td>
+                            <td>${clusterObj.foodN}</td>
+                            <td>${clusterObj.foodP}</td>
+                            <td>${clusterObj.foodQ}</td>
+                            <td>${clusterObj.foodT}</td>
+                `;
+                tablebody.appendChild(newRow);
+            }
+            tablebody.appendChild(grandTotalrow);
+            document.getElementById("gtValue").textContent = grandTotal; 
+        }
+    </script>   
+</body>
+</html>

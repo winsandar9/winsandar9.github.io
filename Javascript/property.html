@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Property and Method</h1>
+    <h2 id="createTextNodeId"></h2>
+
+    <p id=" setAtt">This is Set Attribute</p>
+    <p id="getAtt" style="color:green;" class="getAtt">This is Get Attribute</p>
+    <p id="changeColor" style="color:green;">This is Remove Attribute</p>
+    <button onclick="createText">Create Text</button>
+    <button onclick="createEle()">Create Element Node</button>
+    <button onclick="setAtt()">Set Attribute</button>
+    <button onclick="getAtt()">Get Attribute</button>
+    <button onclick="ChangeColor()">Change Color</button>
+
+    <script>
+        function createText() {
+            let createTextNodeId = document.querySelector("#createTextNodeId");
+            let createText = document.createTextNode('This is Text Node');
+            createTextNodeId.appendChild(createText);
+        }
+        
+        function createEle() {
+            let h3 = document.createElement('div');
+            h3.innerHTML = "This is create<em> Element <em> Node";
+            document.body.appendChild(h3);
+            
+        }
+
+        function setAtt() {
+            let setAtt = document.getElementById('setAtt');
+            console.log(setAtt);
+            setAtt.setAttribute('style','color:red; text-align:center;');
+            
+        }
+        function getAtt() {
+            let getAtt = document.getElementById('getAtt');
+            console.log(getAtt);
+            console.log(getAtt.getAttribute('style'));  
+            
+        }
+
+        function changecolor(){
+            let color = document.getElementById('changeColor');
+            let colorName = color.getAttribute('style');
+            console.log(colorName);
+
+            if(colorName == "color:green;") {
+                color.removeAttribute('style');
+                color.setAttribute('style','color:red;');
+            }else{
+                color.removeAttribute('style');
+                color.setAttribute('style','color:green;');
+            }
+            
+        }
+    </script>
+</body>
+</html>

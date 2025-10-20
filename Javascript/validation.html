@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validation</h1>
+
+    <form action="login.php" onsubmit="return validationForm()">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><span id="email_error"></span><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"> <span id="password_error"></span><br><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+    <script>
+        function validationForm() {
+            // alert('Say Hi');
+            let valid = true;
+            let email = document.querySelector('#email').value;
+            let password = document.querySelector('#password').value;
+
+            // console.log(email,password);
+            if (email === "") {
+                let email_error = document.getElementById('email_error');
+                email_error.innerHTML = "Email is required";
+                email_error.style.color = 'red';
+            }else {
+                let password_error = document.getElementById('password_error');
+                password_error.innerHTML = "Password is required";
+                password_error.style.color = "red";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function</h1>
+    <script>
+        // nameing function
+        function hello(){
+            let num1 = 2;
+            let num2 = 3;
+            let result = num1 + num2;
+            document.write(`Your result is ${result}`);
+        }
+        hello();
+
+        // parameter function
+        function sum(num3,num4){
+            let result = num3 + num4;
+            document.write(`<h1>Your result is $(result)</h1>`);
+        }
+
+        sum(12,18);
+        sum(11,23);
+
+        // default parameter
+        function multi(no1=5,no2=3){
+            let result = no1 * no2;
+            document.write(`<h1>Your result is ${result}</h1>`);
+        }
+        multi(3,8);
+
+        // return function
+        function sub(){
+            let result = 35 -10;
+            return result;
+        }
+        let subData=sub();
+        document.write(`<h1>Your result is ${subData}</h1>`);
+    </script>
+</body>
+</html>

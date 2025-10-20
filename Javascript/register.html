@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Register</h1>
+    <form action="" name="myForm">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="studentName"> <br> <br>
+
+        <label for="age">Age</label> <br>
+        <input type="number" id="age" name="age"> <br> <br>
+
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address"></textarea><br>
+
+        <button type="button" onclick="showData()">Register</button>
+    </form>
+    <h1>Student Lists</h1>
+    <table border="1" cellpadding="30px" cellspacing="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+    <script>
+        var studentListArray = [];
+        function showData(){
+            // getData
+            let name = document.myForm.studentName.value;
+            let age = document.myForm.age.value;
+            let address = document.myForm.address.value;
+
+            // console.log(name,age,address);
+            // create object
+            let student={
+                // key:value
+                student_name : name,
+                student_age : age,
+                student_address : address,
+            }
+            // console.log(student);
+
+            // array push // data prepare
+            studentListArray.push(student);
+            // console.log(studentListArray);
+
+            // showData
+            let html = '';
+            for (let i = 0; i < studentListArray.length; i++){
+                // console.log(studentListArray[i]);
+                let studentObj = studentListArray[i];
+
+                html += `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${studentObj.student_name}</td>
+                        <td>${studentObj.student_age}</td>
+                        <td>${studentObj.student_address}</td>
+                    </tr>   
+                `;
+            }
+            document.getElementById('result').innerHTML = html;
+        }
+    </script>
+</body>
+</html>
