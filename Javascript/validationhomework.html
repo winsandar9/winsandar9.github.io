@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        form{
+            margin-left: 43%;
+        }
+        input{
+            margin-top: 10px;
+        }
+        textarea{
+            margin-top: 10px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 15%;
+            margin-bottom: 20px;
+        }
+        table{
+            margin-left: 31%;
+        }
+        table th{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Validation to Student Register</h2>
+    <form onsubmit="return validStu()">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="studentName"><span id="name_error"></span><br> <br>
+
+        <label for="age">Age</label> <br>
+        <input type="number" id="age" name="age"><span id="age_error"></span><br> <br>
+
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address"></textarea><span id="address_error"></span><br>
+
+        <button type="submit">Register</button>
+    </form>
+    <h2>Student Lists</h2>
+    <table border="1" cellpadding="20px" cellspacing="1.5px">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+    <script>
+        var studentListArray = [];
+        function validStu(){
+            // alert('ok');
+            // getData
+            let valid = true;
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let address = document.getElementById('address').value;
+            // console.log(name,age,address);
+            if (name == "") {
+                let name_error = document.getElementById('name_error');
+                name_error.innerText = "Name is required";
+                name_error.style.color = "red";
+                valid = false;
+            }
+            if(age == "") {
+                let age_error = document.getElementById('age_error');
+                age_error.innerHTML = "Age is required";
+                age_error.style.color = "red";
+                valid = false;
+            }
+            if(address == "") {
+                let address_error = document.getElementById('address_error');
+                address_error.innerText = "Address is required";
+                address_error.style.color = "red";
+                valid = false;
+            }
+            if (!valid) return false;
+            // create object
+            let student={
+                // key:value
+                student_name : name,
+                student_age : age,
+                student_address : address,
+            }
+            // console.log(student);
+
+            // array push // data prepare
+            studentListArray.push(student);
+            // console.log(studentListArray);
+
+            // showData
+            let html = '';
+            for (let i = 0; i < studentListArray.length; i++){
+                // console.log(studentListArray[i]);
+                let studentObj = studentListArray[i];
+
+                html += `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${studentObj.student_name}</td>
+                        <td>${studentObj.student_age}</td>
+                        <td>${studentObj.student_address}</td>
+                    </tr>   
+                `;
+            }
+            document.getElementById('result').innerHTML = html;
+            return false;
+        }
+
+    </script>
+</body>
+</html>

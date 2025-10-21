@@ -30,13 +30,15 @@
                 let email_error = document.getElementById('email_error');
                 email_error.innerHTML = "Email is required";
                 email_error.style.color = 'red';
+                valid = false;
             }else {
                 let password_error = document.getElementById('password_error');
                 password_error.innerHTML = "Password is required";
                 password_error.style.color = "red";
+                valid = false;
             }
 
-            return false;
+            return valid;
         }
     </script>
 </body>
